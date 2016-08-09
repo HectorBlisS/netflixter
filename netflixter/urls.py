@@ -28,5 +28,5 @@ urlpatterns = [
         view=serve,
         kwargs={'document_root':settings.MEDIA_ROOT}),
 
-    url(r'^$', include(UrlsMain,namespace="home")),      
+    url(r'^netflixter/', include(UrlsMain,namespace="home")),      
 ]
