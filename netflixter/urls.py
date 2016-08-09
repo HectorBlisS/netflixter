@@ -1,3 +1,4 @@
+
 """netflixter URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -24,5 +25,6 @@ urlpatterns = [
         regex=r'^media/(?P<path>.*)$',
         view='django.views.static.serve',
         kwargs={'document_root':settings.MEDIA_ROOT}),
-    url(r'^raiz/$', include(UrlsMain,namespace="home")),      
+
+    url(r'^netflixter/', include(UrlsMain,namespace="home")),      
 ]
