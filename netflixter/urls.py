@@ -28,7 +28,7 @@ from accounts import urls as urlsAccounts
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include(urlsAccounts)),
-    url(r'^catalogo/',include(catalogoUrls,namespace="catalogo"))
+    url(r'^catalogo/',include(catalogoUrls,namespace="catalogo")),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,

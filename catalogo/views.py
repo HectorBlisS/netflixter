@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Pelicula
+from django.views.generic import View
 from django.utils.text import slugify
 
 class DetailMovie(View):
@@ -9,4 +10,4 @@ class DetailMovie(View):
 		context = {
 		'detalle':detalle,
 		}
-	return render(request,template_name,context)
+		return render(request,template_name,context)
