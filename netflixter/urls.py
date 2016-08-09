@@ -23,7 +23,7 @@ from accounts import urls as urlsAccounts
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include(urlsAccounts))
+    url(r'^accounts/', include(urlsAccounts)),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,
