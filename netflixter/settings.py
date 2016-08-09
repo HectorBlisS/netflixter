@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalogo',
+<<<<<<< HEAD
     'accounts',
     'social.apps.django_app.default',
+=======
+>>>>>>> 9f7ae6616766d02d5b8c480de7bc3f85628e92e1
 ]
 
 MIDDLEWARE = [
