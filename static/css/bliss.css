@@ -1,0 +1,10 @@
+.nav{
+	width: 100%;
+	background-color: black;
+	color:white;
+}
+.titulo{
+	font-size: 4rem;
+	margin-top: 30px;
+	float:left;
+}
