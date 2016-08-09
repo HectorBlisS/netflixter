@@ -18,12 +18,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from main import urls as UrlsMain
+from django.views.static import serve
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(
         regex=r'^media/(?P<path>.*)$',
-        view='django.views.static.serve',
+        view=serve,
         kwargs={'document_root':settings.MEDIA_ROOT}),
 
     url(r'^netflixter/', include(UrlsMain,namespace="home")),      
