@@ -22,9 +22,6 @@ from catalogo import urls as catalogoUrls
 from django.views.static import serve
 from accounts import urls as urlsAccounts
 
-
-
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include(urlsAccounts)),
@@ -33,6 +30,6 @@ urlpatterns = [
         regex=r'^media/(?P<path>.*)$',
         view=serve,
         kwargs={'document_root':settings.MEDIA_ROOT}),
-
-    url(r'^/', include(UrlsMain,namespace="home")),      
+    
+    url(r'^', include(UrlsMain,namespace="home")),      
 ]
