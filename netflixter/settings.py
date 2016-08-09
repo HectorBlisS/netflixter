@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 """
 Django settings for netflixter project.
 
@@ -127,4 +126,4 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
->>>>>>> 59e744d3acd36292abc66141be8e9a9730e9369f
+
