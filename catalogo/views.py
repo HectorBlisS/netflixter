@@ -2,9 +2,6 @@ from django.shortcuts import render
 from .models import Pelicula
 from django.utils.text import slugify
 
-
-
-
 class DetailMovie(View):
 	def get(self, request,slug):
 		template_name = 'detailmovie.html'

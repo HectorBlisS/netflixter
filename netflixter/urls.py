@@ -19,10 +19,14 @@ from django.contrib import admin
 from django.conf import settings
 from main import urls as UrlsMain
 from django.views.static import serve
+from accounts import urls as urlsAccounts
+
+
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include(urlsAccounts)),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,
