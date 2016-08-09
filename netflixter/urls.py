@@ -23,11 +23,8 @@ from accounts import urls as urlsAccounts
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-<<<<<<< HEAD
     url('', include('social.apps.django_app.urls', namespace='social')),
-=======
     url(r'^accounts/', include(urlsAccounts)),
->>>>>>> 9f7ae6616766d02d5b8c480de7bc3f85628e92e1
     url(
         regex=r'^media/(?P<path>.*)$',
 
