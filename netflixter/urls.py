@@ -18,7 +18,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from main import urls as UrlsMain
+<<<<<<< HEAD
 from catalogo import urls as catalogoUrls
+=======
+from catalogo import urls as UrlsCatalogo
+>>>>>>> dami
 from django.views.static import serve
 from accounts import urls as urlsAccounts
 
@@ -30,6 +34,12 @@ urlpatterns = [
         regex=r'^media/(?P<path>.*)$',
         view=serve,
         kwargs={'document_root':settings.MEDIA_ROOT}),
+<<<<<<< HEAD
     
     url(r'^', include(UrlsMain,namespace="home")),      
+=======
+
+    url(r'^netflixter/', include(UrlsMain,namespace="home")),
+    url(r'^catalogo/', include(UrlsCatalogo,namespace='catalogo')),     
+>>>>>>> dami
 ]
