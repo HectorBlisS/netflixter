@@ -27,7 +27,7 @@ class Registro(View):
 			perfil.user = new_user
 			perfil.save()
 			# perfil = Profile.objects.create(user=new_user)
-			return redirect('registro')
+			return redirect('profile')
 		else:
 			context = {
 			'form':new_user_form
