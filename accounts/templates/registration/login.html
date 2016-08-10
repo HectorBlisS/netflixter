@@ -9,6 +9,10 @@
 			text-align: center;
 			background-color: gray;
 		}
+		p {
+    		font-family: helvetica;
+    		font-size: 15px;
+		}
 	</style>
 </head>
 <body>
@@ -30,7 +34,7 @@
 	<input type="hidden" name="next" value="{{next}}"> 
 	<input type="submit" value="Iniciar Sesión">
 </form>
-<p>Accede con tu cuenta de <a href="{%url 'social:begin' 'facebook'%}" class="button"><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a></p>
+<p>Accede con tu cuenta de  <a href="{%url 'social:begin' 'facebook'%}" class="button"><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a></p>
 <p>Si aún no tienes cuenta puedes crearla <a href="{%url 'registro'%}">aquí</a></p>
 
 </div>
