@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{% block titulo %} Sesión cerrada {%endblock titulo%}
+
+{% block content %}
+
+
+&nbsp;
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+	<div class="Eleven column" style="text-align:center;">
+	
+	<h4 style="color:#fff;">Tu sesión se ha cerrado con exito.</h4>
+	</div>
+</div>
+
+&nbsp;
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+	<div class="Eleven column" style="text-align:center;">
+	
+	<p>Pero puedes continuar aqui:</p>
+	<span><a class="button " style="background-color:#111;color:#fff;border:solid 1px #111;"href="{%url 'login'%}">Iniciar Sesión</a></span>
+	<span><a class="button " style="background-color:#111;color:#fff;border:solid 1px #111;"href="{%url 'home:home'%}">Sigue Navegando</a></span>
+	</div>
+</div>
+
+	
+{% endblock content %}
