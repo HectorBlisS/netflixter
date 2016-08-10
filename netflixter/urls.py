@@ -18,6 +18,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from main import urls as UrlsMain
+from catalogo import urls as UrlsCatalogo
 from django.views.static import serve
 
 
@@ -28,5 +29,6 @@ urlpatterns = [
         view=serve,
         kwargs={'document_root':settings.MEDIA_ROOT}),
 
-    url(r'^netflixter/', include(UrlsMain,namespace="home")),      
+    url(r'^netflixter/', include(UrlsMain,namespace="home")),
+    url(r'^catalogo/', include(UrlsCatalogo,namespace='catalogo')),     
 ]

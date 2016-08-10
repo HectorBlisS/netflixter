@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lista de Peliculas</h1>
+{% for pelicula in peliculas %}
+  <img src="/media/{{pelicula.imagen}}" alt="" />
+  <a href="{{pelicula.get_absolute_url}}"><h2>{{pelicula.titulo}}</h2></a>
+{% endfor %}
+
+{% endblock content %}
