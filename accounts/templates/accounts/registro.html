@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block titulo%}
+Registro
+{%endblock titulo%}
+
+{%block content%}
+	<h1>Registrate</h1>
+	<form action="." method="post">
+		{%csrf_token%}
+		{{form.as_p}}
+		<input type="submit" value="Crear Cuenta">
+	</form>
+{%endblock content%}
