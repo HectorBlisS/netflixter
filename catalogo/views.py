@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_list_or_404
-from .models import Pelicula
+from django.shortcuts import render, get_object_or_404
+from .models import Pelicula, Categoria 
 from django.views.generic import View
 
 
@@ -23,3 +23,16 @@ class DetailView(View):
         }
         return render(request,template_name,context)
 
+class Categorias(View):
+    def get(self, request, categoria=None):
+        if categoria:
+            cat=Categoria.objects.get(nombre=categoria)
+            peliculas = cat.objects.all()
+        else:
+            peliculas = Pelicula.objects.all()
+        template_name = 'catalogos/lista.html'
+        context = {
+        'peliculas':peliculas,
+        'categoria':categoria,
+        }
+        return render (request, template_name, context)
