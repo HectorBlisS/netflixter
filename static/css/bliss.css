@@ -36,6 +36,24 @@ html, body{
 	transition:all 0.5s ease;
 }
 
+
+
+.menu_mini{
+	width: 100%;
+	background:rgba(0,0,0,.5);
+	text-align: center;
+	position: absolute;
+	top:67px;
+	display: none;
+}
+.menu_mini li{
+	color:white;
+	text-decoration: none;
+}
+a:link{
+	text-decoration: none;
+}
+
 @media (max-width: 600px){
 	.navegacion{
 		display:none;
@@ -45,6 +63,14 @@ html, body{
 	}
 	.titulo{
 		padding-left: 0;
+	}
+
+}
+@media (min-width: 600px){
+	ul.menu_mini li{
+		color: transparent;
+		background: transparent;
+		display: none;
 	}
 }
 
