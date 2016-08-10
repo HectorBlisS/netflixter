@@ -1,0 +1,1 @@
+web: gunicorn netflixter.wsgi --log-file -
