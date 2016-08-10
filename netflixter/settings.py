@@ -1,4 +1,3 @@
-
 """
 Django settings for netflixter project.
 
@@ -39,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
     'catalogo',
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE = [
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -127,4 +129,11 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.Facebook2OAuth2',
+    )
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1793949574168856'
+SOCIAL_AUTH_FACEBOOK_SECRET = '6709b492f51a00b9725cef92e331dada'
 

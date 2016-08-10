@@ -15,6 +15,7 @@ class Registro(View):
 		}
 		return render(request,template_name,context)
 
+	
 	def post(self,request):
 		template_name = "accounts/registro.html"
 		new_user_form = RegistroUsuario(request.POST)
@@ -26,10 +27,14 @@ class Registro(View):
 			perfil = Profile()
 			perfil.user = new_user
 			perfil.save()
+<<<<<<< HEAD
 			# perfil = Profile.objects.create(user=new_user)
+=======
+>>>>>>> cd8509304e58c7310d41c84ab902e02ee29c5033
 			return redirect('profile')
 		else:
 			context = {
 			'form':new_user_form
 			}
 			return render(request,template_name,context)
+

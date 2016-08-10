@@ -1,0 +1,46 @@
+{%load static%}
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/skeleton.css'%}">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style type="text/css">
+		.login-form{
+			text-align: center;
+			background-color: gray;
+		}
+		p {
+    		font-family: helvetica;
+    		font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+
+
+
+
+
+{%if form.errors%}
+<p>Tu usuario y contraseña no concuerdan, por favor intenta de nuevoe</p>
+{%else%}
+<center><p>Ingresa con tu usuario y contraseña</p></center>
+{%endif%}
+<div class="login-form container">
+
+<form action="{%url 'login'%}" method="post">
+	{%csrf_token%}
+	{{form.as_p}}
+	<input type="hidden" name="next" value="{{next}}"> 
+	<input type="submit" value="Iniciar Sesión">
+</form>
+<p>Accede con tu cuenta de  <a href="{%url 'social:begin' 'facebook'%}" class="button"><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a></p>
+<p>Si aún no tienes cuenta puedes crearla <a href="{%url 'registro'%}">aquí</a></p>
+
+</div>
+
+
+
+</body>
+</html>
+	
