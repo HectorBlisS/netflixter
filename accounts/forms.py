@@ -15,3 +15,8 @@ class RegistroUsuario(forms.ModelForm):
 		if cd['password'] != cd['password2']:
 			raise forms.ValidationError('Tu contrasena no coincide')
 		return cd['password2']
+
+class ProfileEditForm(forms.ModelForm):
+	class Meta:
+		model = Profile
+		fields = ('telefono','date_of_birth','photo')

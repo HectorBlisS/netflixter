@@ -1,7 +1,7 @@
 {%extends 'base.html'%}
 
 {%block estilos%}
-.photo{
+.foto{
 	border:2px solid white;
 	border-radius:50%;
 	width:100px;
@@ -13,10 +13,10 @@ body{
 {%endblock estilos%}
 
 {%block content%}
-	<img class="photo" src="{%if request.user.profile.photo %}{{request.user.profile.photo.url}}{%endif%}">
-	<h2>¡Hola! Es bueno tenerte de vuelta {{request.user.username}}</h2>
+	<img class="foto" src="{%if request.user.profile.photo %}{{request.user.profile.photo.url}}{%endif%}">
+	<h3>¡Hola! Es bueno tenerte de vuelta {{request.user.username}}</h3>
 	<a href="{%url 'logout'%}">
-	<button>Cierra tu sesión</button>
+	<button class="w3-btn w3-padding-16 w3-large w3-margin-top">Cerrar Sesión</button>
 	</a>
 <form action="." method="post" enctype='multipart/form-data'>
 	{%csrf_token%}
