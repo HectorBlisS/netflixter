@@ -1,6 +1,12 @@
 from django.contrib import admin
 from .models import Pelicula, Categoria
 
-# Register your models here.
-admin.site.register(Pelicula)
+
+
+
+class Peliculas_Admin(admin.ModelAdmin):
+	prepopulated_fields = {'slug':('titulo',)}
+
+
+admin.site.register(Pelicula, Peliculas_Admin)
 admin.site.register(Categoria)

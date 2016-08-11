@@ -1,9 +1,51 @@
 {% extends "base.html" %}
 
-{% block content %}
-<img src="/media/{{pelicula.imagen}}" alt="" />
-<h1>{{pelicula.titulo}}</h1>
-<p>
-  {{pelicula.descripcion}}
-</p>
-{% endblock content %}
+{%load static%}
+
+{%block estilos%}
+body{
+	display:block;
+	 color: #FFF;
+	
+}
+.skin{
+	width:400px;
+	height:500px;
+}
+
+.divuno{
+height: auto;
+float:left;
+margin-left:2em;
+}
+  
+.divdos{
+height: auto;
+float:right;
+padding-right:20em;
+}
+
+{%endblock estilos%}
+
+{%block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="divuno">
+	<center>    
+		<img class="skin" src="/media/{{pelicula.imagen}}">
+	</center>
+</div>
+<div class="divdos">
+			<h1>{{pelicula.titulo}}</h1>
+			<p><strong>Descripcion:</strong>  {{pelicula.descripcion}}</p>
+			<p><strong>Director:</strong>  {{pelicula.director}}</p>
+			<p><strong>Escritor:</strong>  {{pelicula.escritor}}</p>
+			<p><strong>Estudio:</strong>  {{pelicula.estudio}}</p>
+			<p><strong>Año:</strong>  {{pelicula.year}}</p>
+			<p><strong>Escritor:</strong>  {{pelicula.escritor}}</p>
+			<p><strong>Duracion:</strong>  {{pelicula.duracion}}</p>
+			<p><strong>Clasificacion:</strong>  {{pelicula.clasificacion}}</p>
+</div>
+{%endblock content %}
