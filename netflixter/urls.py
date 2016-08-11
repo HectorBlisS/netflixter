@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from main import urls as UrlsMain
+
 from catalogo import urls as catalogoUrls
 from django.views.static import serve
 from accounts import urls as urlsAccounts
@@ -17,6 +18,5 @@ urlpatterns = [
         view= serve,
 
         kwargs={'document_root':settings.MEDIA_ROOT}),
-    
     url(r'^', include(UrlsMain,namespace="home")),      
 ]

@@ -1,6 +1,7 @@
-html, body{
+html, body{ 
 	margin: 0;
 	background-color: red;	
+	background-image: url(691745.jpg);
 }
 .nav{
 	width: 100%;

@@ -1,0 +1,46 @@
+.box-detalle{
+	color:#AC1212;
+	border: 1px solid #FFFFFF;
+	background-color: #A7A1A1;
+	margin: 10px 150px 10px 50px;
+	position: fixed;
+}
+.detalles-movies{
+	color:#222;
+	border: 1px solid #FFFFFF;
+	background-color: #A7A1A1;
+	margin: 10px 150px 10px 50px;
+	position: fixed;
+}
+.detalles{
+	
+	background-color: #A7A1A1;
+	margin: 10px 150px 10px 50px;
+	position: relative;
+	float: left;
+}
+h1{
+	color: #FF0000;
+	font-size: 4rem;
+	margin-top: 10px;
+	float:left;
+	padding-left: 40px;
+	padding-right: 40px;
+	transition:all 0.5s ease;
+}
+
+.imgmovie{
+	margin: 10px 10px 10px 10px;
+	float: left;
+	
+}
+
+dl{
+	color: #E73737;
+	font-size: 1rem;
+
+}
+#btn-trailer{
+	background-color: #A40606;
+	float: right;	
+}
