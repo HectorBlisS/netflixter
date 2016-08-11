@@ -1,9 +1,36 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from .models import Profile
-from .forms import RegistroUsuario
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
+from .forms import RegistroUsuario, ProfileEditForm
 
-# Create your views here.
+class Dashboard(View):
+	@method_decorator(login_required)
+	def get(self, request):
+		template_name="accounts/perfil.html"
+		# userform = UserEditForm(instance=request.user)
+		profileform = ProfileEditForm(instance=request.user.profile)
+		context = {
+		#'userform':userform,
+		'profileform':profileform,
+		}
+		return render(request,template_name,context)
+	def perf(self,request):
+		template_name="accounts/perfil.html"
+		# userform = UserEditForm(instance=request.user,data=request.POST)
+		profileform = ProfileEditForm(instance=request.user.profile,data=request.POST,files=request.FILES)
+		if profileform.is_valid():
+			# userform.save()
+			profileform.save()
+			return redirect('profile')
+		else:
+			context={
+			# 'userform':userform,
+			'profileform':profileform,
+			}
+			return render(request,template_name,context)
+		
 
 
 class Registro(View):
