@@ -1,7 +1,7 @@
 import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "netflixter.settings")
 from django.core.wsgi import get_wsgi_application
 from whitenoise.django import DjangoWhiteNoise
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "netflixter.settings")
 
 
 application = get_wsgi_application()
